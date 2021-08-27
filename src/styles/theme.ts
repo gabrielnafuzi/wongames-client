@@ -1,4 +1,4 @@
-export default {
+export const theme = {
   grid: {
     container: '130rem',
     gutter: '3.2rem'
@@ -47,4 +47,4 @@ export default {
     modal: 40,
     alwaysOnTop: 50
   }
-}
+} as const
