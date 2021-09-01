@@ -4,6 +4,11 @@ import { Banner, BannerProps } from '.'
 export default {
   title: 'Banner',
   component: Banner,
+  argTypes: {
+    ribbon: {
+      type: 'string'
+    }
+  },
   args: {
     img: 'https://source.unsplash.com/user/willianjusten/1042x580',
     title: 'Defy death',
@@ -19,19 +24,29 @@ export default {
 export const Default: Story<BannerProps> = (args) => (
   <div
     style={{
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
+      maxWidth: '104rem',
+      margin: '0 auto',
+      padding: '2rem'
     }}
   >
-    <div
-      style={{
-        width: '100%',
-        padding: '3rem'
-      }}
-    >
-      <Banner {...args} />
-    </div>
+    <Banner {...args} />
   </div>
 )
+
+export const WithRibbon: Story<BannerProps> = (args) => (
+  <div
+    style={{
+      maxWidth: '104rem',
+      margin: '0 auto',
+      padding: '2rem'
+    }}
+  >
+    <Banner {...args} />
+  </div>
+)
+
+WithRibbon.args = {
+  ribbon: '20% OFF',
+  ribbonSize: 'normal',
+  ribbonColor: 'primary'
+}
