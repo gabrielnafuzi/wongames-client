@@ -45,6 +45,8 @@ export const Wrapper = styled.section<WrapperProps>`
       top: 50%;
       width: 2.5rem;
       height: 2.5rem;
+      padding: 0;
+      transform: translate(0, -50%);
     }
 
     .slick-prev {
