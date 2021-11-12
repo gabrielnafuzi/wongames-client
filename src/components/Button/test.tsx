@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react'
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
+import { screen } from '@testing-library/react'
 
-import { renderWithTheme } from 'utils/tests'
+import { renderWithTheme } from '@/utils/tests'
 
 import { Button } from '.'
 

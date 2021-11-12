@@ -5,8 +5,8 @@ import {
   FavoriteBorder
 } from '@styled-icons/material-outlined'
 
-import { Ribbon, RibbonColors, RibbonSizes } from 'components/Ribbon'
-import { Button } from 'components/Button'
+import { Button } from '@/components/Button'
+import { Ribbon, RibbonColors, RibbonSizes } from '@/components/Ribbon'
 
 import * as S from './styles'
 

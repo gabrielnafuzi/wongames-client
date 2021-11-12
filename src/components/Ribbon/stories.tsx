@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react'
+
 import { Ribbon, RibbonProps } from '.'
 
 export default {

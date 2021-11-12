@@ -1,5 +1,7 @@
 import { Story, Meta } from '@storybook/react'
-import { GameCardProps } from 'components/GameCard'
+
+import { GameCardProps } from '@/components/GameCard'
+
 import { GameCardSlider } from '.'
 
 const items = [

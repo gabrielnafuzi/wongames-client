@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react'
+
 import { Highlight, HighlightProps } from '.'
 
 export default {

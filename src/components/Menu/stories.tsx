@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react'
+
 import { Menu, MenuProps } from '.'
 
 export default {

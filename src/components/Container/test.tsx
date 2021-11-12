@@ -1,5 +1,5 @@
-import { theme } from 'styles'
-import { renderWithTheme } from 'utils/tests'
+import { theme } from '@/styles'
+import { renderWithTheme } from '@/utils/tests'
 
 import { Container } from '.'
 
