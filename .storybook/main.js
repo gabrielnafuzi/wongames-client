@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path')
+
 module.exports = {
   stories: ['../src/components/**/stories.tsx'],
   addons: ['@storybook/addon-essentials', 'storybook-addon-next-router'],
@@ -10,6 +13,8 @@ module.exports = {
   }),
   webpackFinal: (config) => {
     config.resolve.modules.push(`${process.cwd()}/src`)
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src')
+
     return config
   }
 }
