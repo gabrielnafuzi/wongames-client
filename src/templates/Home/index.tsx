@@ -1,7 +1,37 @@
-import * as S from './styles'
+import { Container, Footer, Heading, Menu } from '@/components'
 
 export const Home = () => (
-  <S.Wrapper>
-    <h1>Home</h1>
-  </S.Wrapper>
+  <section>
+    <Container>
+      <Menu />
+    </Container>
+
+    <Container>
+      <Heading lineLeft lineColor="secondary" color="black">
+        News
+      </Heading>
+    </Container>
+
+    <Container>
+      <Heading lineLeft lineColor="secondary">
+        Most popular
+      </Heading>
+    </Container>
+
+    <Container>
+      <Heading lineLeft lineColor="secondary">
+        Upcomming
+      </Heading>
+    </Container>
+
+    <Container>
+      <Heading lineLeft lineColor="secondary">
+        Free games
+      </Heading>
+    </Container>
+
+    <Container>
+      <Footer />
+    </Container>
+  </section>
 )

@@ -21,7 +21,7 @@ export const Footer = () => (
 
     <S.Content>
       <S.Column>
-        <LocalHeading title="Contact" />
+        <LocalHeading title="Contact us" />
 
         <a href="mailto:sac@wongames.com">sac@wongames.com</a>
       </S.Column>
