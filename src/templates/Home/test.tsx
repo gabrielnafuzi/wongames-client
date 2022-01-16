@@ -11,18 +11,18 @@ import { Home } from '.'
 
 const props = {
   banners: bannersMock,
-  newGamers: gamesMock,
+  newGamers: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: gamesMock,
-  upcomingGames: gamesMock,
+  mostPopularGames: [gamesMock[0]],
+  upcomingGames: [gamesMock[0]],
   upcomingHighlight: highlightMock,
-  upcomingMoreGames: gamesMock,
-  freeGames: gamesMock,
+  upcomingMoreGames: [gamesMock[0]],
+  freeGames: [gamesMock[0]],
   freeHighlight: highlightMock
 }
 
 describe('<Home />', () => {
-  it('should render menu and footer', () => {
+  it('should render menu, sections and footer', () => {
     renderWithTheme(<Home {...props} />)
 
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
@@ -32,10 +32,6 @@ describe('<Home />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2)
-  })
-
-  it('should render the sections', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getByRole('heading', { name: /news/i })).toHaveStyle({
       color: '#030517',
@@ -56,16 +52,12 @@ describe('<Home />', () => {
       color: '#FAFAFA',
       borderLeft: '0.7rem solid #3CD3C1'
     })
-  })
-
-  it('should render section elements', () => {
-    renderWithTheme(<Home {...props} />)
 
     // banner
     expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
 
-    // card game ( 5 sections with 4 cards each = 5 * 4 = 20 cards )
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(20)
+    // card game ( 5 sections with 1 cards each = 5 * 1 = 5 cards )
+    expect(screen.getAllByText(/population zero/i)).toHaveLength(5)
 
     // highlight
     expect(screen.getAllByText(/red dead is back!/i)).toHaveLength(3)
