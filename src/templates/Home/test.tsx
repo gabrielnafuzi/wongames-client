@@ -30,7 +30,7 @@ describe('<Home />', () => {
       borderLeft: '0.7rem solid #3CD3C1'
     })
 
-    expect(screen.getByRole('heading', { name: /Upcomming/i })).toHaveStyle({
+    expect(screen.getByRole('heading', { name: /Upcoming/i })).toHaveStyle({
       color: '#FAFAFA',
       borderLeft: '0.7rem solid #3CD3C1'
     })
