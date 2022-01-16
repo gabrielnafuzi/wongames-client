@@ -1,5 +1,7 @@
-import Main from '@/components/Main'
+import { Home } from '@/templates'
 
-export default function Home() {
-  return <Main />
+const Index = () => {
+  return <Home />
 }
+
+export default Index
