@@ -5,27 +5,26 @@ import * as GameCardSliderStyles from '@/components/GameCardSlider/styles'
 import * as HeadingStyles from '@/components/Heading/styles'
 import * as HighlightStyles from '@/components/Highlight/styles'
 
-export const Sections = styled.section`
+const Sections = styled.section`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper},
-    ${GameCardSliderStyles.Wrapper},
-    ${HighlightStyles.Wrapper} {
+    ${HighlightStyles.Wrapper},
+    ${GameCardSliderStyles.Wrapper} {
       margin-bottom: ${theme.spacings.medium};
     }
 
     ${HighlightStyles.Wrapper} {
-      ${media.greaterThan('medium')`
+      ${media.lessThan('medium')`
         margin-right: calc(-${theme.grid.gutter} / 2);
         margin-left: calc(-${theme.grid.gutter} / 2);
       `}
     }
 
     ${GameCardSliderStyles.Wrapper} {
-      ${media.greaterThan('huge')`
+      ${media.lessThan('huge')`
         margin-right: calc(-${theme.grid.gutter} / 2);
       `}
     }
-
     margin-bottom: calc(${theme.spacings.large} * 2);
   `}
 `
@@ -56,10 +55,6 @@ export const SectionNews = styled(Sections)`
       padding-bottom: 10rem;
       background-color: ${theme.colors.lightBg};
       clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-
-      ${HeadingStyles.Wrapper} {
-        color: ${theme.colors.black};
-      }
     `}
   `}
 `

@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<HomeTemplateProps> =
     return {
       props: {
         banners: bannersMock,
-        newGamers: gamesMock,
+        newGames: gamesMock,
         mostPopularHighlight: highlightMock,
         mostPopularGames: gamesMock,
         upcomingGames: gamesMock,

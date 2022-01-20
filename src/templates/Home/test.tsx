@@ -11,7 +11,7 @@ import { Home } from '.'
 
 const props = {
   banners: bannersMock,
-  newGamers: [gamesMock[0]],
+  newGames: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
   mostPopularGames: [gamesMock[0]],
   upcomingGames: [gamesMock[0]],

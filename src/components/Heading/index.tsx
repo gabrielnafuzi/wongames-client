@@ -18,14 +18,18 @@ export const Heading = ({
   lineBottom = false,
   lineColor = 'primary',
   size = 'medium'
-}: HeadingProps) => (
-  <S.Wrapper
-    color={color}
-    lineLeft={lineLeft}
-    lineBottom={lineBottom}
-    lineColor={lineColor}
-    size={size}
-  >
-    {children}
-  </S.Wrapper>
-)
+}: HeadingProps) => {
+  console.log({ color, children })
+
+  return (
+    <S.Wrapper
+      color={color}
+      lineLeft={lineLeft}
+      lineBottom={lineBottom}
+      lineColor={lineColor}
+      size={size}
+    >
+      {children}
+    </S.Wrapper>
+  )
+}
