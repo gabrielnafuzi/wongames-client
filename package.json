@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint src --max-warnings=0",
-    "test": "jest --maxWorkers=50%",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
-    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
+    "build": "next build",
+    "dev": "next dev",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "lint": "eslint src --max-warnings=0",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "next start",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test": "jest --maxWorkers=50%",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "lint-staged": {
     "src/**/*": [
