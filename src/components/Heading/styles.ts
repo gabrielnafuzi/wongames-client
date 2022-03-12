@@ -37,7 +37,7 @@ const wrapperModifiers = {
       width: 5rem;
       border-bottom: 0.5rem solid ${theme.colors[lineColor]};
     }
-  `
+  `,
 }
 
 export const Wrapper = styled.h2<HeadingProps>`

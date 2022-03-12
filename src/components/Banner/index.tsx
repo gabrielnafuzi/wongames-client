@@ -22,7 +22,7 @@ export const Banner = ({
   buttonLink,
   ribbon,
   ribbonSize,
-  ribbonColor
+  ribbonColor,
 }: BannerProps) => (
   <S.Wrapper>
     {!!ribbon && (

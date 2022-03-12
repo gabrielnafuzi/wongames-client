@@ -10,9 +10,9 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'won-dark'
-    }
-  }
+      default: 'won-dark',
+    },
+  },
 } as Meta
 
 export const Default: Story<BannerSliderProps> = (args) => (

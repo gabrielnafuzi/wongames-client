@@ -18,7 +18,7 @@ const props = {
   upcomingHighlight: highlightMock,
   upcomingMoreGames: [gamesMock[0]],
   freeGames: [gamesMock[0]],
-  freeHighlight: highlightMock
+  freeHighlight: highlightMock,
 }
 
 describe('<Home />', () => {

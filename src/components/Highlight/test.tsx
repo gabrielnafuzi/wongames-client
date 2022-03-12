@@ -10,7 +10,7 @@ const props = {
   subtitle: 'Heading 2',
   backgroundImage: '/img/red-dead-img.jpg',
   buttonLabel: 'Buy now',
-  buttonLink: '/rdr2'
+  buttonLink: '/rdr2',
 }
 
 describe('<Highlight />', () => {
@@ -37,7 +37,7 @@ describe('<Highlight />', () => {
     const { container } = renderWithTheme(<Highlight {...props} />)
 
     expect(container.firstChild).toHaveStyle({
-      'background-image': `url(${props.backgroundImage})`
+      'background-image': `url(${props.backgroundImage})`,
     })
   })
 
@@ -59,7 +59,7 @@ describe('<Highlight />', () => {
     )
 
     expect(container.firstChild).toHaveStyleRule('text-align', 'right', {
-      modifier: `${S.Content}`
+      modifier: `${S.Content}`,
     })
   })
 
@@ -74,7 +74,7 @@ describe('<Highlight />', () => {
     )
 
     expect(container.firstChild).toHaveStyleRule('text-align', 'left', {
-      modifier: `${S.Content}`
+      modifier: `${S.Content}`,
     })
   })
 })

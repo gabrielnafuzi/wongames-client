@@ -13,7 +13,7 @@ const items = [
     subtitle: '<p>Play the new <strong>CrashLands</strong> season</p>',
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
+    ribbon: 'Bestselling',
   },
   {
     img: 'https://source.unsplash.com/user/willianjusten/1042x580',
@@ -21,8 +21,8 @@ const items = [
     subtitle: '<p>Play the new <strong>CrashLands</strong> season</p>',
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
-  }
+    ribbon: 'Bestselling',
+  },
 ]
 
 describe('<BannerSlider />', () => {

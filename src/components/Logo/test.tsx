@@ -9,7 +9,7 @@ describe('<Logo />', () => {
     renderWithTheme(<Logo />)
 
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
-      color: '#FAFAFA'
+      color: '#FAFAFA',
     })
   })
 
@@ -17,7 +17,7 @@ describe('<Logo />', () => {
     renderWithTheme(<Logo color="black" />)
 
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
-      color: '#030517'
+      color: '#030517',
     })
   })
 
@@ -25,7 +25,7 @@ describe('<Logo />', () => {
     renderWithTheme(<Logo />)
 
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
-      width: '11rem'
+      width: '11rem',
     })
   })
 
@@ -33,7 +33,7 @@ describe('<Logo />', () => {
     renderWithTheme(<Logo size="large" />)
 
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
-      width: '20rem'
+      width: '20rem',
     })
   })
 
@@ -44,7 +44,7 @@ describe('<Logo />', () => {
       'width',
       '5.8rem',
       {
-        media: '(max-width: 768px)'
+        media: '(max-width: 768px)',
       }
     )
   })

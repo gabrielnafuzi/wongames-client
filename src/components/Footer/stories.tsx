@@ -4,7 +4,7 @@ import { Footer } from '.'
 
 export default {
   title: 'Footer',
-  component: Footer
+  component: Footer,
 } as Meta
 
 export const Default: Story = () => (

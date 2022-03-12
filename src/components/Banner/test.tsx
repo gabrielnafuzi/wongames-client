@@ -9,7 +9,7 @@ const props = {
   title: 'Defy death',
   subtitle: '<p>Play the new <strong>CrashLands</strong> season',
   buttonLabel: 'Buy now',
-  buttonLink: '/games/defy-death'
+  buttonLink: '/games/defy-death',
 }
 
 describe('<Banner />', () => {
@@ -55,12 +55,12 @@ describe('<Banner />', () => {
     expect(ribbon.firstChild).toHaveTextContent(/my ribbon/i)
 
     expect(ribbon).toHaveStyle({
-      'background-color': '#3CD3C1'
+      'background-color': '#3CD3C1',
     })
 
     expect(ribbon).toHaveStyle({
       height: '2.6rem',
-      'font-size': '1.2rem'
+      'font-size': '1.2rem',
     })
   })
 })

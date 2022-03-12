@@ -18,10 +18,10 @@ const settings: SliderSettings = {
       breakpoint: 1170,
       settings: {
         vertical: false,
-        verticalSwiping: false
-      }
-    }
-  ]
+        verticalSwiping: false,
+      },
+    },
+  ],
 }
 
 export const BannerSlider = ({ items }: BannerSliderProps) => (

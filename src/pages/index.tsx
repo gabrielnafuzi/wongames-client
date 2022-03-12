@@ -22,8 +22,8 @@ export const getServerSideProps: GetServerSideProps<HomeTemplateProps> =
         upcomingHighlight: highlightMock,
         upcomingMoreGames: gamesMock,
         freeGames: gamesMock,
-        freeHighlight: highlightMock
-      }
+        freeHighlight: highlightMock,
+      },
     }
   }
 

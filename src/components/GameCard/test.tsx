@@ -8,7 +8,7 @@ const props = {
   title: 'Super Mario Bros',
   developer: 'Nintendo',
   img: '/',
-  price: 'R$ 200,00'
+  price: 'R$ 200,00',
 }
 
 describe('<GameCard />', () => {
@@ -49,11 +49,11 @@ describe('<GameCard />', () => {
     renderWithTheme(<GameCard {...props} promotionalPrice="R$ 15,00" />)
 
     expect(screen.getByText('R$ 200,00')).toHaveStyle({
-      textDecoration: 'line-through'
+      textDecoration: 'line-through',
     })
 
     expect(screen.getByText('R$ 15,00')).not.toHaveStyle({
-      textDecoration: 'line-through'
+      textDecoration: 'line-through',
     })
   })
 

@@ -12,7 +12,7 @@ export type RibbonProps = {
 export const Ribbon = ({
   children,
   color = 'primary',
-  size = 'normal'
+  size = 'normal',
 }: RibbonProps) => (
   <S.Wrapper color={color} size={size}>
     {children}

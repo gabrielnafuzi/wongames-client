@@ -38,7 +38,7 @@ const wrapperModifiers = {
       border-top-width: 0.7rem;
       border-right-width: 1.5rem;
     }
-  `
+  `,
 }
 
 export const Wrapper = styled.div<Omit<RibbonProps, 'children'>>`

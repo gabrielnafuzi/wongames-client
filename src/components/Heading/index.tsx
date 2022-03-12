@@ -17,7 +17,7 @@ export const Heading = ({
   lineLeft = false,
   lineBottom = false,
   lineColor = 'primary',
-  size = 'medium'
+  size = 'medium',
 }: HeadingProps) => {
   return (
     <S.Wrapper

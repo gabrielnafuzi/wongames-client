@@ -114,7 +114,7 @@ const priceModifiers = {
     color: ${theme.colors.gray};
     text-decoration: line-through;
     margin-right: ${theme.spacings.xsmall};
-  `
+  `,
 }
 
 export const Price = styled.div<PriceProps>`

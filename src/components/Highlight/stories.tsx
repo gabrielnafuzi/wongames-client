@@ -8,8 +8,8 @@ export default {
   component: Highlight,
   args: { ...item },
   parameters: {
-    layout: 'fullscreen'
-  }
+    layout: 'fullscreen',
+  },
 } as Meta
 
 export const Default: Story<HighlightProps> = (args) => (
@@ -25,5 +25,5 @@ export const WithFloatImage: Story<HighlightProps> = (args) => (
 )
 
 WithFloatImage.args = {
-  floatImage: '/img/red-dead-float.png'
+  floatImage: '/img/red-dead-float.png',
 }

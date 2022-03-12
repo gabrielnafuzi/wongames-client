@@ -1,6 +1,6 @@
 import {
   ArrowBackIos as ArrowLeft,
-  ArrowForwardIos as ArrowRight
+  ArrowForwardIos as ArrowRight,
 } from '@styled-icons/material-outlined'
 
 import { GameCard, GameCardProps } from '@/components/GameCard'
@@ -25,36 +25,36 @@ const settings: SliderSettings = {
       breakpoint: 1375,
       settings: {
         arrows: false,
-        slidesToShow: 3.2
-      }
+        slidesToShow: 3.2,
+      },
     },
     {
       breakpoint: 1024,
       settings: {
         arrows: false,
-        slidesToShow: 2.2
-      }
+        slidesToShow: 2.2,
+      },
     },
     {
       breakpoint: 570,
       settings: {
         arrows: false,
-        slidesToShow: 1.2
-      }
+        slidesToShow: 1.2,
+      },
     },
     {
       breakpoint: 375,
       settings: {
         arrows: false,
-        slidesToShow: 1.1
-      }
-    }
-  ]
+        slidesToShow: 1.1,
+      },
+    },
+  ],
 }
 
 export const GameCardSlider = ({
   items,
-  color = 'white'
+  color = 'white',
 }: GameCardSliderProps) => (
   <S.Wrapper color={color}>
     <Slider settings={settings}>

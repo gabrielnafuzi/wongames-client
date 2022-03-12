@@ -2,7 +2,7 @@
 import {
   AddShoppingCart,
   Favorite,
-  FavoriteBorder
+  FavoriteBorder,
 } from '@styled-icons/material-outlined'
 
 import { Button } from '@/components/Button'
@@ -33,7 +33,7 @@ export const GameCard = ({
   ribbon,
   ribbonColor = 'primary',
   ribbonSize = 'small',
-  onFav
+  onFav,
 }: GameCardProps) => (
   <S.Wrapper>
     {!!ribbon && (

@@ -5,7 +5,7 @@ import {
   GameCardSlider,
   Heading,
   Highlight,
-  Menu
+  Menu,
 } from '@/components'
 import type { BannerProps, GameCardProps, HighlightProps } from '@/components'
 
@@ -32,7 +32,7 @@ export const Home = ({
   upcomingHighlight,
   upcomingMoreGames,
   freeGames,
-  freeHighlight
+  freeHighlight,
 }: HomeTemplateProps) => (
   <section>
     <Container>

@@ -4,12 +4,12 @@ import { Checkbox, CheckboxProps } from '.'
 
 export default {
   title: 'Checkbox',
-  component: Checkbox
+  component: Checkbox,
 } as Meta
 
 export const Default: Story<CheckboxProps> = (args) => <Checkbox {...args} />
 
 Default.args = {
   label: 'checkbox',
-  labelColor: 'black'
+  labelColor: 'black',
 }

@@ -25,7 +25,7 @@ const wrapperModifiers = {
     ${FloatImage} {
       justify-self: end;
     }
-  `
+  `,
 }
 
 export const Wrapper = styled.section<WrapperProps>`
