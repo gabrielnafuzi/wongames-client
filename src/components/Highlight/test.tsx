@@ -26,6 +26,7 @@ describe('<Highlight />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument()
+
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
       '/rdr2'

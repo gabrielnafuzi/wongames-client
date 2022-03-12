@@ -67,6 +67,7 @@ describe('<Heading />', () => {
     const heading = screen.getByRole('heading', { name: /lorem ipsum/i })
 
     expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #F231A5' })
+
     expect(heading).toHaveStyleRule('border-bottom', '0.5rem solid #F231A5', {
       modifier: '::after'
     })
@@ -82,6 +83,7 @@ describe('<Heading />', () => {
     const heading = screen.getByRole('heading', { name: /lorem ipsum/i })
 
     expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #3CD3C1' })
+
     expect(heading).toHaveStyleRule('border-bottom', '0.5rem solid #3CD3C1', {
       modifier: '::after'
     })

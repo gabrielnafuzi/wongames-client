@@ -25,10 +25,12 @@ describe('<Banner />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByRole('img', { name: /defy death/i })).toBeInTheDocument()
+
     expect(screen.getByRole('img', { name: /defy death/i })).toHaveAttribute(
       'src',
       'https://source.unsplash.com/user/willianjusten/1042x580'
     )
+
     expect(screen.getByRole('img', { name: /defy death/i })).toHaveAttribute(
       'aria-label',
       'Defy death'
@@ -51,9 +53,11 @@ describe('<Banner />', () => {
 
     expect(ribbon).toBeInTheDocument()
     expect(ribbon.firstChild).toHaveTextContent(/my ribbon/i)
+
     expect(ribbon).toHaveStyle({
       'background-color': '#3CD3C1'
     })
+
     expect(ribbon).toHaveStyle({
       height: '2.6rem',
       'font-size': '1.2rem'

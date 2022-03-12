@@ -51,6 +51,7 @@ describe('<GameCard />', () => {
     expect(screen.getByText('R$ 200,00')).toHaveStyle({
       textDecoration: 'line-through'
     })
+
     expect(screen.getByText('R$ 15,00')).not.toHaveStyle({
       textDecoration: 'line-through'
     })
