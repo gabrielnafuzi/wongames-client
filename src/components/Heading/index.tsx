@@ -19,8 +19,6 @@ export const Heading = ({
   lineColor = 'primary',
   size = 'medium'
 }: HeadingProps) => {
-  console.log({ color, children })
-
   return (
     <S.Wrapper
       color={color}

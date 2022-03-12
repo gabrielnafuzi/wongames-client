@@ -25,33 +25,29 @@ describe('<Home />', () => {
   it('should render menu, sections and footer', () => {
     renderWithTheme(<Home {...props} />)
 
+    // menu
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
 
+    // footer
     expect(
       screen.getByRole('heading', { name: /follow us/i })
     ).toBeInTheDocument()
 
+    // logos (menu/footer)
     expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2)
+    expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
 
-    expect(screen.getByRole('heading', { name: /news/i })).toHaveStyle({
-      color: '#030517',
-      borderLeft: '0.7rem solid #3CD3C1'
-    })
+    expect(
+      screen.getByRole('heading', { name: /most popular/i })
+    ).toBeInTheDocument()
 
-    expect(screen.getByRole('heading', { name: /most popular/i })).toHaveStyle({
-      color: '#FAFAFA',
-      borderLeft: '0.7rem solid #3CD3C1'
-    })
+    expect(
+      screen.getByRole('heading', { name: /upcoming/i })
+    ).toBeInTheDocument()
 
-    expect(screen.getByRole('heading', { name: /upcoming/i })).toHaveStyle({
-      color: '#FAFAFA',
-      borderLeft: '0.7rem solid #3CD3C1'
-    })
-
-    expect(screen.getByRole('heading', { name: /free games/i })).toHaveStyle({
-      color: '#FAFAFA',
-      borderLeft: '0.7rem solid #3CD3C1'
-    })
+    expect(
+      screen.getByRole('heading', { name: /free games/i })
+    ).toBeInTheDocument()
 
     // banner
     expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
