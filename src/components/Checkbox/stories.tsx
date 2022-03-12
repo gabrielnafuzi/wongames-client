@@ -8,3 +8,8 @@ export default {
 } as Meta
 
 export const Default: Story<CheckboxProps> = (args) => <Checkbox {...args} />
+
+Default.args = {
+  label: 'checkbox',
+  labelColor: 'black'
+}
