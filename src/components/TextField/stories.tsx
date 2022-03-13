@@ -16,7 +16,9 @@ export default {
   },
   argTypes: {
     onInput: { action: 'changed' },
-    icon: { type: '' },
+    icon: {
+      control: false,
+    },
   },
 } as Meta
 

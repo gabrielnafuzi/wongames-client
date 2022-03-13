@@ -11,7 +11,7 @@ export default {
       type: 'string',
     },
     icon: {
-      type: '',
+      control: false,
     },
   },
 } as Meta
