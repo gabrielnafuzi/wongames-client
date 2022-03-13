@@ -1,0 +1,57 @@
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+import { renderWithTheme } from '@/utils/tests'
+
+import { TextField } from '.'
+
+describe('<TextField />', () => {
+  it('should with label', () => {
+    renderWithTheme(<TextField label="label" labelFor="field" id="field" />)
+
+    expect(screen.queryByLabelText('label')).toBeInTheDocument()
+  })
+
+  it('should without label', () => {
+    renderWithTheme(<TextField />)
+
+    expect(screen.queryByLabelText('label')).not.toBeInTheDocument()
+  })
+
+  it('should render with placeholder', () => {
+    renderWithTheme(<TextField placeholder="placeholder" />)
+
+    expect(screen.getByPlaceholderText('placeholder')).toBeInTheDocument()
+  })
+
+  it('should changes its value when typing', async () => {
+    const onInput = jest.fn()
+
+    renderWithTheme(
+      <TextField label="label" labelFor="field" id="field" onInput={onInput} />
+    )
+
+    const input = screen.getByRole('textbox')
+    const text = 'This is my new text'
+
+    userEvent.type(input, text)
+
+    await waitFor(() => {
+      expect(input).toHaveValue(text)
+      expect(onInput).toHaveBeenCalledTimes(text.length)
+      expect(onInput).toHaveBeenLastCalledWith(text)
+    })
+  })
+
+  it('should be accessible with tab', () => {
+    renderWithTheme(<TextField label="label" labelFor="field" id="field" />)
+
+    const input = screen.getByLabelText('label')
+
+    expect(document.body).toHaveFocus()
+
+    userEvent.tab()
+
+    expect(input).toHaveFocus()
+  })
+})
