@@ -1,7 +1,7 @@
 import { Auth } from '@/templates'
 
 const SignIn = () => {
-  return <Auth />
+  return <Auth title="Sign In">children</Auth>
 }
 
 export default SignIn
