@@ -1,5 +1,7 @@
 import 'match-media-mock'
 
+import React from 'react'
+
 import { screen } from '@testing-library/react'
 
 import { items as bannersMock } from '@/components/BannerSlider/mock'
@@ -21,41 +23,33 @@ const props = {
   freeHighlight: highlightMock,
 }
 
+jest.mock('@/components/Menu', () => {
+  return {
+    __esModule: true,
+    Menu: () => <div data-testid="Mock Menu" />,
+  }
+})
+
+jest.mock('@/components/ShowCase', () => {
+  return {
+    __esModule: true,
+    ShowCase: () => <div data-testid="Mock ShowCase" />,
+  }
+})
+
+jest.mock('@/components/BannerSlider', () => {
+  return {
+    __esModule: true,
+    BannerSlider: () => <div data-testid="Mock BannerSlider" />,
+  }
+})
+
 describe('<Home />', () => {
   it('should render menu, sections and footer', () => {
     renderWithTheme(<Home {...props} />)
 
-    // menu
-    expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
-
-    // footer
-    expect(
-      screen.getByRole('heading', { name: /follow us/i })
-    ).toBeInTheDocument()
-
-    // logos (menu/footer)
-    expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2)
-    expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
-
-    expect(
-      screen.getByRole('heading', { name: /most popular/i })
-    ).toBeInTheDocument()
-
-    expect(
-      screen.getByRole('heading', { name: /upcoming/i })
-    ).toBeInTheDocument()
-
-    expect(
-      screen.getByRole('heading', { name: /free games/i })
-    ).toBeInTheDocument()
-
-    // banner
-    expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
-
-    // card game ( 5 sections with 1 cards each = 5 * 1 = 5 cards )
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(5)
-
-    // highlight
-    expect(screen.getAllByText(/red dead is back!/i)).toHaveLength(3)
+    expect(screen.getByTestId('Mock Menu')).toBeInTheDocument()
+    expect(screen.getByTestId('Mock BannerSlider')).toBeInTheDocument()
+    expect(screen.getAllByTestId('Mock ShowCase')).toHaveLength(5)
   })
 })

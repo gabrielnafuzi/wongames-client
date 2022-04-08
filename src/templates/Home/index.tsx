@@ -1,6 +1,5 @@
-import { BannerSlider, Container, Footer, Menu } from '@/components'
+import { BannerSlider, Container, Footer, Menu, ShowCase } from '@/components'
 import type { BannerProps, GameCardProps, HighlightProps } from '@/components'
-import { ShowCase } from '@/components/ShowCase'
 
 import * as S from './styles'
 
