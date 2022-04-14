@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/fa-brands": "^10.38.0",
     "@styled-icons/material-outlined": "^10.34.0",
     "@styled-icons/remix-fill": "^10.18.0",
     "next": "11.0.1",
@@ -38,8 +39,8 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-typescript": "^7.14.5",
-    "@storybook/addon-essentials": "6.3.4",
-    "@storybook/react": "6.4.19",
+    "@storybook/addon-essentials": "6.4.21",
+    "@storybook/react": "6.4.21",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
