@@ -3,7 +3,7 @@ import { renderHook, act } from '@testing-library/react'
 import { useDisclosure } from '.'
 
 describe('useDisclosure', () => {
-  it('should close correctly', () => {
+  it('should handle close correctly', () => {
     const { result } = renderHook(() => useDisclosure(true))
     expect(result.current[0]).toBe(true)
 
@@ -11,7 +11,7 @@ describe('useDisclosure', () => {
     expect(result.current[0]).toBe(false)
   })
 
-  it('should open correctly', () => {
+  it('should handle open correctly', () => {
     const { result } = renderHook(() => useDisclosure(false))
     expect(result.current[0]).toBe(false)
 
@@ -19,7 +19,7 @@ describe('useDisclosure', () => {
     expect(result.current[0]).toBe(true)
   })
 
-  it('should toggle correctly', () => {
+  it('should handle toggle correctly', () => {
     const { result } = renderHook(() => useDisclosure(false))
     expect(result.current[0]).toBe(false)
 
