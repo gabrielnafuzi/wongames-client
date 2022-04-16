@@ -33,7 +33,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-slick": "^0.28.1",
-    "styled-components": "5.3.0",
+    "styled-components": "5.3.5",
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
     "@types/react-slick": "^0.23.8",
-    "@types/styled-components": "^5.1.24",
+    "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.28.3",
     "babel-loader": "^8.2.2",
