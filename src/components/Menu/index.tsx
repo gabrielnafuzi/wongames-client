@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Link from 'next/link'
 
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
@@ -10,6 +8,7 @@ import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
 import { MediaMatch } from '@/components/MediaMatch'
+import { useDisclosure } from '@/hooks'
 
 import * as S from './styles'
 
@@ -18,12 +17,12 @@ export type MenuProps = {
 }
 
 export const Menu = ({ username }: MenuProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, { close, open }] = useDisclosure(false)
 
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
-        <S.IconWrapper onClick={() => setIsOpen(true)}>
+        <S.IconWrapper onClick={open}>
           <MenuIcon aria-label="Open Menu" />
         </S.IconWrapper>
       </MediaMatch>
@@ -58,7 +57,7 @@ export const Menu = ({ username }: MenuProps) => {
       </S.MenuGroup>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+        <CloseIcon aria-label="Close Menu" onClick={close} />
 
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
