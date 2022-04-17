@@ -1,8 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
 
-import { items as bannersMock } from '@/components/BannerSlider/mock'
-import { items as gamesMock } from '@/components/GameCardSlider/mock'
-import { item as highlightMock } from '@/components/Highlight/mock'
+import { bannerSliderMock } from '@/components/BannerSlider/mock'
+import { gameCardSliderMock } from '@/components/GameCardSlider/mock'
+import { highlightMock } from '@/components/Highlight/mock'
 import { Home, HomeTemplateProps } from '@/templates'
 
 type IndexPage = NextPage<
@@ -11,21 +11,21 @@ type IndexPage = NextPage<
 
 type GetServerSidePropsHome = GetServerSideProps<HomeTemplateProps>
 
-const Index: IndexPage = ({ children: _, ...props }) => {
+const Index: IndexPage = (props) => {
   return <Home {...props} />
 }
 
 export const getServerSideProps: GetServerSidePropsHome = async () => {
   return {
     props: {
-      banners: bannersMock,
-      newGames: gamesMock,
+      banners: bannerSliderMock,
+      newGames: gameCardSliderMock,
       mostPopularHighlight: highlightMock,
-      mostPopularGames: gamesMock,
-      upcomingGames: gamesMock,
+      mostPopularGames: gameCardSliderMock,
+      upcomingGames: gameCardSliderMock,
       upcomingHighlight: highlightMock,
-      upcomingMoreGames: gamesMock,
-      freeGames: gamesMock,
+      upcomingMoreGames: gameCardSliderMock,
+      freeGames: gameCardSliderMock,
       freeHighlight: highlightMock,
     },
   }

@@ -31,6 +31,7 @@ export const GameDetails = ({
   releaseDate,
   rating,
   genres,
+  publisher,
 }: GameDetailsProps) => {
   const formattedReleaseDate = useMemo(
     () => formatDate(releaseDate),
@@ -78,7 +79,7 @@ export const GameDetails = ({
 
         <S.Block>
           <S.Label>Publisher</S.Label>
-          <S.Description>2K</S.Description>
+          <S.Description>{publisher}</S.Description>
         </S.Block>
 
         <S.Block>

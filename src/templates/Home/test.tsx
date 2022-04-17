@@ -4,22 +4,22 @@ import React from 'react'
 
 import { screen } from '@testing-library/react'
 
-import { items as bannersMock } from '@/components/BannerSlider/mock'
-import { items as gamesMock } from '@/components/GameCardSlider/mock'
-import { item as highlightMock } from '@/components/Highlight/mock'
+import { bannerSliderMock } from '@/components/BannerSlider/mock'
+import { gameCardSliderMock } from '@/components/GameCardSlider/mock'
+import { highlightMock } from '@/components/Highlight/mock'
 import { renderWithTheme } from '@/utils/tests'
 
 import { Home } from '.'
 
 const props = {
-  banners: bannersMock,
-  newGames: [gamesMock[0]],
+  banners: bannerSliderMock,
+  newGames: [gameCardSliderMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: [gamesMock[0]],
-  upcomingGames: [gamesMock[0]],
+  mostPopularGames: [gameCardSliderMock[0]],
+  upcomingGames: [gameCardSliderMock[0]],
   upcomingHighlight: highlightMock,
-  upcomingMoreGames: [gamesMock[0]],
-  freeGames: [gamesMock[0]],
+  upcomingMoreGames: [gameCardSliderMock[0]],
+  freeGames: [gameCardSliderMock[0]],
   freeHighlight: highlightMock,
 }
 

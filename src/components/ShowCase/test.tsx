@@ -1,8 +1,8 @@
 import 'match-media-mock'
 import { screen } from '@testing-library/react'
 
-import { items as gamesMock } from '@/components/GameCardSlider/mock'
-import { item as highlightMock } from '@/components/Highlight/mock'
+import { gameCardSliderMock } from '@/components/GameCardSlider/mock'
+import { highlightMock } from '@/components/Highlight/mock'
 import { renderWithTheme } from '@/utils/tests'
 
 import { ShowCase } from '.'
@@ -10,7 +10,7 @@ import { ShowCase } from '.'
 const props = {
   title: 'Most popular',
   highlight: highlightMock,
-  games: gamesMock.slice(0, 1),
+  games: gameCardSliderMock.slice(0, 1),
 }
 
 describe('<ShowCase />', () => {
@@ -26,7 +26,7 @@ describe('<ShowCase />', () => {
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: gamesMock[0].title })
+      screen.getByRole('heading', { name: gameCardSliderMock[0].title })
     ).toBeInTheDocument()
   })
 
@@ -40,7 +40,7 @@ describe('<ShowCase />', () => {
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: gamesMock[0].title })
+      screen.getByRole('heading', { name: gameCardSliderMock[0].title })
     ).toBeInTheDocument()
 
     expect(
@@ -56,7 +56,7 @@ describe('<ShowCase />', () => {
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: gamesMock[0].title })
+      screen.getByRole('heading', { name: gameCardSliderMock[0].title })
     ).toBeInTheDocument()
 
     expect(
@@ -73,7 +73,7 @@ describe('<ShowCase />', () => {
     screen.getByRole('heading', { name: highlightMock.title })
 
     expect(
-      screen.queryByRole('heading', { name: gamesMock[0].title })
+      screen.queryByRole('heading', { name: gameCardSliderMock[0].title })
     ).not.toBeInTheDocument()
   })
 })
