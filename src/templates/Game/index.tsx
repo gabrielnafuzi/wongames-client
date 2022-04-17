@@ -9,6 +9,7 @@ import {
   HighlightProps,
   ShowCase,
   TextContent,
+  Divider,
 } from '@/components'
 import { Base } from '@/templates/Base'
 
@@ -52,9 +53,10 @@ export const Game = ({
           <TextContent title="Description" content={description} />
         </S.SectionDescription>
 
-        <S.SectionDetails>
+        <S.SectionGameDetails>
           <GameDetails {...details} />
-        </S.SectionDetails>
+          <Divider />
+        </S.SectionGameDetails>
 
         <ShowCase
           title="Upcoming"
