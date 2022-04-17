@@ -10,13 +10,13 @@ import { gameCardSliderMock } from '@/components/GameCardSlider/mock'
 import { highlightMock } from '@/components/Highlight/mock'
 import { Game, GameTemplateProps } from '@/templates'
 
-type GameSlugPageProps = NextPage<
+type GameSlugPageWithProps = NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 >
 
 type GetStaticPropsGame = GetStaticProps<GameTemplateProps>
 
-const GameSlugPage: GameSlugPageProps = (props) => {
+const GameSlugPage: GameSlugPageWithProps = (props) => {
   return <Game {...props} />
 }
 
