@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 import { useRef } from 'react'
 
 import {
@@ -29,7 +28,7 @@ export const Gallery = ({ items }: GalleryProps) => {
 
   useSimpleHotkey('Escape', close)
 
-  const handleOpenModal = (imgIndex: number) => {
+  const handleOpenModal = (imgIndex: number) => () => {
     open()
 
     sliderRef.current?.slickGoTo(imgIndex, true)
@@ -44,7 +43,7 @@ export const Gallery = ({ items }: GalleryProps) => {
             role="button"
             src={item.src}
             alt={`Thumb - ${item.label}`}
-            onClick={() => handleOpenModal(index)}
+            onClick={handleOpenModal(index)}
           />
         ))}
       </Slider>

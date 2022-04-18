@@ -1,2 +1,3 @@
 !.storybook
 !.jest
+**/__snapshots__/**
