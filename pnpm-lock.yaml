@@ -10,6 +10,7 @@ specifiers:
   '@babel/preset-typescript': ^7.16.7
   '@storybook/addon-essentials': 6.4.22
   '@storybook/react': 6.5.0-alpha.63
+  '@styled-icons/boxicons-solid': ^10.38.0
   '@styled-icons/fa-brands': ^10.38.0
   '@styled-icons/material-outlined': ^10.34.0
   '@styled-icons/remix-fill': ^10.18.0
@@ -51,6 +52,7 @@ specifiers:
   typescript: ^4.6.3
 
 dependencies:
+  '@styled-icons/boxicons-solid': 10.38.0_3f66b59e89881af4de65896fdc5f431b
   '@styled-icons/fa-brands': 10.38.0_3f66b59e89881af4de65896fdc5f431b
   '@styled-icons/material-outlined': 10.34.0_3f66b59e89881af4de65896fdc5f431b
   '@styled-icons/remix-fill': 10.18.0_3f66b59e89881af4de65896fdc5f431b
@@ -4126,6 +4128,18 @@ packages:
       regenerator-runtime: 0.13.9
       resolve-from: 5.0.0
     dev: true
+
+  /@styled-icons/boxicons-solid/10.38.0_3f66b59e89881af4de65896fdc5f431b:
+    resolution: {integrity: sha512-uuMtF1R61smQT5r6HIYMHvpVD0XSErXXNQYl5d6lCtMyefd0gIE5Rw+iD9i/RxHFUHNHbvL69LvitCLtNWrSqw==}
+    peerDependencies:
+      react: '*'
+      styled-components: '*'
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@styled-icons/styled-icon': 10.6.3_3f66b59e89881af4de65896fdc5f431b
+      react: 18.0.0
+      styled-components: 5.3.5_react-dom@18.0.0+react@18.0.0
+    dev: false
 
   /@styled-icons/fa-brands/10.38.0_3f66b59e89881af4de65896fdc5f431b:
     resolution: {integrity: sha512-zZzGkcshXIF55geFIpMzMLH6tSPzQeeFPFZ1RMrZ3TWBjUuquMx+vYFsO7kzq939X84gLjmpkJZsAP9QKJFvMg==}
