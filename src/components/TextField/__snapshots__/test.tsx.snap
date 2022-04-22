@@ -107,6 +107,7 @@ exports[`<TextField /> should render with error 1`] = `
     <input
       class="c8"
       id="field"
+      name="field"
       type="text"
       value=""
     />
@@ -117,4 +118,4 @@ exports[`<TextField /> should render with error 1`] = `
     Error message
   </p>
 </div>
-`
+`;
