@@ -1,17 +1,13 @@
-import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 
 import { bannerSliderMock } from '@/components/BannerSlider/mock'
 import { gameCardSliderMock } from '@/components/GameCardSlider/mock'
 import { highlightMock } from '@/components/Highlight/mock'
 import { Home, HomeTemplateProps } from '@/templates'
 
-type IndexPage = NextPage<
-  InferGetServerSidePropsType<typeof getServerSideProps>
->
-
 type GetServerSidePropsHome = GetServerSideProps<HomeTemplateProps>
 
-const Index: IndexPage = (props) => {
+const Index: NextPage<HomeTemplateProps> = (props) => {
   return <Home {...props} />
 }
 
