@@ -1,4 +1,3 @@
-import 'match-media-mock'
 import { screen } from '@testing-library/react'
 
 import { gameCardSliderMock } from '@/components/GameCardSlider/mock'

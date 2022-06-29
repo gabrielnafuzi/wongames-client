@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react'
 
 import { renderWithTheme } from '@/utils/tests'
 
-import 'match-media-mock'
 import { GameDetails } from '.'
 import { gameDetailsMock } from './mock'
 

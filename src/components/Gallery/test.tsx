@@ -1,5 +1,3 @@
-import 'match-media-mock'
-
 import { fireEvent, screen } from '@testing-library/react'
 
 import { renderWithTheme } from '@/utils/tests'

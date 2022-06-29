@@ -7,7 +7,6 @@ import { gameInfoMock } from '@/components/GameInfo/mock'
 import { highlightMock } from '@/components/Highlight/mock'
 import { renderWithTheme } from '@/utils/tests'
 
-import 'match-media-mock'
 import { Game, GameTemplateProps } from '.'
 
 const props: GameTemplateProps = {

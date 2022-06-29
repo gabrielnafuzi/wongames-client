@@ -1,5 +1,3 @@
-import 'match-media-mock'
-
 import { screen } from '@testing-library/react'
 
 import { exploreSidebarMock } from '@/components/ExploreSidebar/mock'

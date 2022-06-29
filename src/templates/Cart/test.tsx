@@ -1,4 +1,3 @@
-import 'match-media-mock'
 import { screen } from '@testing-library/react'
 
 import { cartListMock } from '@/components/CartList/mock'
