@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 type Callbacks = {
   onOpen?: () => void
@@ -6,27 +6,32 @@ type Callbacks = {
 }
 
 export const useDisclosure = (initialState: boolean, callbacks?: Callbacks) => {
+  const { onClose, onOpen } = callbacks || {}
+
   const [opened, setOpened] = useState(initialState)
 
-  const open = () => {
+  const open = useCallback(() => {
     if (!opened) {
       setOpened(true)
 
-      callbacks?.onOpen?.()
+      onOpen?.()
     }
-  }
+  }, [onOpen, opened])
 
-  const close = () => {
+  const close = useCallback(() => {
     if (opened) {
       setOpened(false)
 
-      callbacks?.onClose?.()
+      onClose?.()
     }
-  }
+  }, [onClose, opened])
 
-  const toggle = () => {
+  const toggle = useCallback(() => {
     opened ? close() : open()
-  }
+  }, [open, close, opened])
 
-  return [opened, { open, close, toggle }] as const
+  return useMemo(
+    () => [opened, { open, close, toggle }] as const,
+    [close, open, opened, toggle]
+  )
 }
